@@ -3,7 +3,7 @@
 **DevFolio 3D** is a cutting-edge, interactive developer portfolio built with **React**, **Three.js**, and **React Three Fiber**.  
 It blends sleek UI design with real-time 3D graphics, creating an immersive experience that showcases skills, projects, and creativity in a unique way.
 
-🌐 **[Live Demo](https://your-live-demo-link.com)**
+🌐 **[Live Demo](https://dev-folio-3-d.vercel.app/)**
 
 ---
 
