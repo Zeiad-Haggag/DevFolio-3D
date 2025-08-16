@@ -62,7 +62,7 @@ export const myProjects = [
     desc: "A feature-rich, responsive streaming platform replica powered by React, Redux, and Styled Components, integrating Firebase for authentication and real-time content. It mirrors core Disney+ flows with seamless navigation and dynamic rendering.",
     subdesc:
       "Users get a smooth multi-device experience, instant state updates with Redux, and real-time movie data via Firebase—crafted with modern ES6+, component-scoped styles, and a scalable architecture for long-term maintainability.",
-    href: "https://disney-pluse-clone-29812.web.app/",
+    href: "https://disney-pluse-clone-zeiad-haggag.vercel.app/",
     texture: "/textures/project/project1.mp4",
     logo: "/assets/diseny-plus.svg",
     logoStyle: {
