@@ -75,8 +75,9 @@ function About() {
                 I’m very flexible with time zone communications & locations
               </p>
               <p className="grid-subtext text-sm sm:text-base leading-relaxed text-justify">
-                I'm based in Alexandria, Egypt and open to remote work or
-                working on-site at the company's location.
+                I'm based in Alexandria, Egypt, and I’m open to remote
+                opportunities as well as relocating or working on-site at the
+                company’s location.
               </p>
               <a href="#contact" className="w-fit">
                 <Button
