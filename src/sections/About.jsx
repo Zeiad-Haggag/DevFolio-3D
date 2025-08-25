@@ -23,7 +23,7 @@ function About() {
             />
             <div>
               <p className="grid-headtext"> Hi, I'm Zeiad Haggag</p>
-              <p className="grid-subtext">
+              <p className="grid-subtext text-sm sm:text-base leading-relaxed text-justify">
                 Skilled Frontend Developer specializing in creating seamless,
                 dynamic web applications with expertise in React, Next.js, and
                 modern web technologies.
@@ -40,7 +40,7 @@ function About() {
             />
             <div>
               <p className="grid-headtext">Tech Stack</p>
-              <p className="grid-subtext">
+              <p className="grid-subtext text-sm sm:text-base leading-relaxed text-justify">
                 I specialize in a variety of languages, frameworks, and tools
                 that allow me to build robust and scalable applications
               </p>
@@ -71,10 +71,10 @@ function About() {
               />
             </div>
             <div>
-              <p className="grid-headtext">
+              <p className="grid-headtext ">
                 I’m very flexible with time zone communications & locations
               </p>
-              <p className="grid-subtext">
+              <p className="grid-subtext text-sm sm:text-base leading-relaxed text-justify">
                 I'm based in Alexandria, Egypt and open to remote work or
                 working on-site at the company's location.
               </p>
@@ -98,7 +98,7 @@ function About() {
             />
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
-              <p className="grid-subtext">
+              <p className="text-sm sm:text-base leading-relaxed text-justify grid-subtext ">
                 I love solving problems and building things through code.
                 Programming isn&apos;t just my profession—it&apos;s my passion.
                 I enjoy exploring new technologies, and enhancing my skills.

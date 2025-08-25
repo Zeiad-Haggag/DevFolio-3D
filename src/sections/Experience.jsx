@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { workExperiences } from "../constants";
 import { OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
@@ -7,16 +7,30 @@ import Devoloper from "../components/Devoloper";
 
 function Experience() {
   const [animationName, setAnimationName] = useState("idle");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // أقل من md يبقى موبايل
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="c-space my-20" id="work">
       <div className="w-full text-white-600">
         <h3 className="head-text">My work Experience</h3>
+
         <div className="work-container">
+          {/* Canvas */}
           <div className="work-canvas">
             <Canvas
               camera={{
-                position: [0, 1.6, 5],
+                position: isMobile ? [0, 2.2, 6] : [0, 1.6, 5],
               }}
+              style={{ width: "100%", height: isMobile ? "400px" : "500px" }}
             >
               <ambientLight intensity={7} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -24,20 +38,19 @@ function Experience() {
               <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
               <Suspense fallback={<CanvasLoader />}>
                 <Devoloper
-                  position-y={-3}
-                  scale={3}
+                  position-y={isMobile ? -3.3 : -3}
+                  scale={isMobile ? 3.2 : 3}
                   animationName={animationName}
                 />
               </Suspense>
             </Canvas>
           </div>
+
+          {/* Content */}
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
               {workExperiences.map(
-                (
-                  { id, name, pos, duration, title, icon, animation },
-                  index
-                ) => (
+                ({ id, name, pos, duration, title, icon, animation }) => (
                   <div
                     key={id}
                     className="work-content_container group"
@@ -58,7 +71,7 @@ function Experience() {
                       <p className="text-sm mb-5">
                         {pos} -- {duration}
                       </p>
-                      <p className="group-hover:text-white transition ease-in-out duration-500">
+                      <p className="text-sm sm:text-base leading-relaxed text-justify group-hover:text-white transition ease-in-out duration-500">
                         {title}
                       </p>
                     </div>

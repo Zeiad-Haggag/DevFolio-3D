@@ -63,8 +63,12 @@ const Projects = () => {
               {currentProject.title}
             </p>
 
-            <p className="animatedText">{currentProject.desc}</p>
-            <p className="animatedText">{currentProject.subdesc}</p>
+            <p className="animatedText text-sm sm:text-base leading-relaxed text-justify">
+              {currentProject.desc}
+            </p>
+            <p className="animatedText text-sm sm:text-base leading-relaxed text-justify">
+              {currentProject.subdesc}
+            </p>
           </div>
 
           <div className="flex items-center justify-between flex-wrap gap-5">
